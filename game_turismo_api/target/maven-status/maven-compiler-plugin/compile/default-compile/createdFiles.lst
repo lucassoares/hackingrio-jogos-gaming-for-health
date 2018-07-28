@@ -1,0 +1,7 @@
+model\Local.class
+repository\LocalRepository.class
+repository\PersonRepository.class
+repository\UsuarioRepository.class
+model\Usuario.class
+hello\Application.class
+model\Person.class
