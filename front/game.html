@@ -14,7 +14,37 @@
     </script>
   </head>
   <body>
-  	<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+      </div>
+    </nav>
+
+    <div id="map" style="height: 100vh;"></div>
+
+
+  	<div class="container-fluid">
       <div class="alert alert-success text-center" id="cadastradoSucesso" role="alert" hidden>
          Cadastro realizado com sucesso!
          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -24,16 +54,19 @@
 
   		<div class="row">
   			<div class="col-md-12">
-  				<div id="map" style="height: 100vh; margin-top: 100px; margin-bottom: 50px;">
-            
-          </div>
-          <div id="demo">
-            
-          </div>
+          <div id="demo" hidden></div>
 
+          <div class="btn-group" role="group" aria-label="Basic example" style="position: absolute; top: -60px;">
+            <button type="button" id="rounded_button_map" class="btn btn-warning">Água</button>
+            <button type="button" id="rounded_button_map" class="btn btn-warning">Ar Livre</button>
+            <button type="button" id="rounded_button_map" class="btn btn-warning">Lugares Hi.</button>
+            <button type="button" id="rounded_button_map" class="btn btn-warning">Visitados</button>
+          </div>
   			</div>
-  		</div>
-  	</div>
+      </div>
+
+		</div>
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -50,6 +83,7 @@
               navigator.geolocation.getCurrentPosition(showPosition);
           } else {
               x.innerHTML = "Localização não é suportada pelo navegador!";
+              x.hidden = false;
           }
       }
       function showPosition(position) {
@@ -73,7 +107,6 @@
       let urlAtual = (window.location).toString();
       if( urlAtual.includes("created=t") ) {
         let cadastradoSucesso = document.getElementById("cadastradoSucesso").hidden = false;
-        console.log(cadastradoSucesso);
       }
 
     </script>
