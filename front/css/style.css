@@ -25,3 +25,8 @@ body{
 #rounded_button{
 	border-radius: 100px;
 }
+#rounded_button_map{
+	border-radius: 100px;
+	margin:0.8px;
+	left:-11px;
+}
