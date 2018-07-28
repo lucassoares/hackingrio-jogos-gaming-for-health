@@ -29,43 +29,123 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
+              Perfil
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Configurações</a>
+              <a class="dropdown-item" href="#">Conquistar</a>
+              <a class="dropdown-item" href="#" onclick="logout()">Sair</a>
             </div>
           </li>
       </div>
     </nav>
-
-    <div id="map" style="height: 100vh;"></div>
-
-
-  	<div class="container-fluid">
-      <div class="alert alert-success text-center" id="cadastradoSucesso" role="alert" hidden>
-         Cadastro realizado com sucesso!
+    <div class="alert alert-success text-center" id="cadastradoSucesso" role="alert" hidden>
+         Cadastro realizado com sucesso! 
          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+    </div>
+    
+    <div id="map" style="height: 90vh;"></div>
 
-  		<div class="row">
-  			<div class="col-md-12">
-          <div id="demo" hidden></div>
+    <div id="demo" hidden></div>
 
-          <div class="btn-group" role="group" aria-label="Basic example" style="position: absolute; top: -60px;">
-            <button type="button" id="rounded_button_map" class="btn btn-warning">Água</button>
-            <button type="button" id="rounded_button_map" class="btn btn-warning">Ar Livre</button>
-            <button type="button" id="rounded_button_map" class="btn btn-warning">Lugares Hi.</button>
-            <button type="button" id="rounded_button_map" class="btn btn-warning">Visitados</button>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="btn-group" role="group" aria-label="Basic example" style="position: absolute; top: -70px; left: 5%;">
+            <button type="button" id="rounded_button_map" class="btn btn-warning" data-toggle="modal" data-target="#modalAgua">Água</button>
+            <button type="button" id="rounded_button_map" class="btn btn-warning" data-toggle="modal" data-target="#modalArLivre">Ar Livre</button>
+            <button type="button" id="rounded_button_map" class="btn btn-warning" data-toggle="modal" data-target="#modalLugaresHis">Lugares Hi.</button>
+            <button type="button" id="rounded_button_map" class="btn btn-warning" data-toggle="modal" data-target="#modalVisitados">Visitados</button>
           </div>
-  			</div>
+        </div>
       </div>
+    </div>
 
-		</div>
+    <!-- Modal - Água -->
+    <div class="modal fade" id="modalAgua" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Água</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal - Ar Livre -->
+    <div class="modal fade" id="modalArLivre" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ar Livre</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal - Lugares Historicos -->
+    <div class="modal fade" id="modalLugaresHis" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Lugares Historicos</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal  - Mais  Visitados -->
+    <div class="modal fade" id="modalVisitados" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Mais  Visitados</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -107,6 +187,11 @@
       let urlAtual = (window.location).toString();
       if( urlAtual.includes("created=t") ) {
         let cadastradoSucesso = document.getElementById("cadastradoSucesso").hidden = false;
+      }
+
+      function logout() {
+        document.cookie = "logged=false";
+        window.location.href = "index.html";
       }
 
     </script>

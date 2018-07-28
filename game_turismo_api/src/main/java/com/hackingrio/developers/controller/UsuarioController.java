@@ -32,9 +32,8 @@ public class UsuarioController {
 			String cripto = Security.criptografiaBase64Encoder(password);
 			Usuario usuario = usuarioRepository.findByUsername(username);
 			if(cripto.equals(usuario.getPassword())) return "True";
-			else {
-				throw new Exception("Senha ou usuário não estão corretos!"); 
-			}
+			
+			throw new Exception("Senha ou usuário não estão corretos!"); 	
 		}catch(Exception e) {
 			throw new Exception("Senha ou usuário não estão corretos!"); 
 		}
