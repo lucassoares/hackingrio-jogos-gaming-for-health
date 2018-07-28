@@ -42,12 +42,13 @@ public class UsuarioController {
 	
 	@PostMapping(value = "/singup/")
 	@ResponseBody	
-	public String singUp(@RequestParam("username") String username, @RequestParam("password") String password) throws Exception {
+	public String singUp(@RequestParam("nome") String nome, @RequestParam("username") String username, @RequestParam("password") String password) throws Exception {
 		try{
 			String criptografado = Security.criptografiaBase64Encoder(password);
 			Usuario usuario = new Usuario();
 			usuario.setUsername(username);
 			usuario.setPassword(criptografado);
+			usuario.setNome(nome);
 			usuarioRepository.save(usuario);
 			return usuario.toString();
 		}catch(Exception e) {
