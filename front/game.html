@@ -27,6 +27,10 @@
   				<div id="map" style="height: 100vh; margin-top: 100px; margin-bottom: 50px;">
             
           </div>
+          <div id="demo">
+            
+          </div>
+
   			</div>
   		</div>
   	</div>
@@ -35,8 +39,26 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
+      var x = document.getElementById("demo");
+      var latitude;
+      var longitude;
+
+      getLocation();
+
+      function getLocation() {
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+              x.innerHTML = "Localização não é suportada pelo navegador!";
+          }
+      }
+      function showPosition(position) {
+          latitude  = position.coords.latitude;
+          longitude = position.coords.longitude;
+          initMap();
+      }
        function initMap() {
-        var myLatLng = {lat: -22.8938492, lng: -43.1991803};
+        var myLatLng = {lat: latitude, lng: longitude};
         var map = new google.maps.Map(document.getElementById('map'), {
           center: myLatLng,
           zoom: 4
@@ -47,8 +69,7 @@
           title: 'Hello World!'
         });
       }
-      initMap();
-
+      
       let urlAtual = (window.location).toString();
       if( urlAtual.includes("created=t") ) {
         let cadastradoSucesso = document.getElementById("cadastradoSucesso").hidden = false;
