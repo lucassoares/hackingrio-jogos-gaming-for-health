@@ -23,10 +23,10 @@ import org.hibernate.annotations.NaturalId;
 @Entity
 public class Usuario {
     @Id
-    private String username;
-	
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+   
+    private String username;
     
     private String password;
     
