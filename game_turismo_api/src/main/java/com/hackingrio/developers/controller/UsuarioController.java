@@ -29,9 +29,9 @@ public class UsuarioController {
 	@ResponseBody
 	public String singIn(@RequestParam("username") String username, @RequestParam("password") String password) throws Exception {
 		try{
-			String criptografado = Security.criptografiaBase64Encoder(password);
+			String cripto = Security.criptografiaBase64Encoder(password);
 			Usuario usuario = usuarioRepository.findByUsername(username);
-			if(usuario.getPassword() == criptografado) return "{}";
+			if(cripto.equals(usuario.getPassword())) return "True";
 			else {
 				throw new Exception("Senha ou usuário não estão corretos!"); 
 			}

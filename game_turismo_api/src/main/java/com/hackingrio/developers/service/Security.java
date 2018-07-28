@@ -9,7 +9,8 @@ public class Security {
         return Arrays.toString(encodedBytes);
     }
     public static String descriptografiaBase64Decoder(String valorCriptografado) {
-        byte[] decodedBytes = Base64.getDecoder().decode(valorCriptografado);
-        return Arrays.toString(decodedBytes);
+        byte[] decodedBytes = Base64.getMimeDecoder().decode(valorCriptografado);
+        String output = new String(decodedBytes);
+        return output;//Arrays.toString(decodedBytes);
     }
 }
