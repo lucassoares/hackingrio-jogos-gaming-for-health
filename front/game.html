@@ -7,24 +7,42 @@
     <meta name="author" content="Gaming For Health">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <title>HackingRio  - Game</title>
-
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?key=coloque_sua_chave_aqui" >
+    <script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8MPq9oYdh-2zRiJawfCrh36QQ7Jfgb4M" >
     </script>
   </head>
   <body>
+    <div class="col-md-12" style="background-color: white; height: 60px;">
+      
+    </div>
   	<div class="container">
   		<div class="row">
   			<div class="col-md-12">
-  				
+  				<div id="map" style="height: 100vh; margin-top: 100px; margin-bottom: 50px;">
+            
+          </div>
   			</div>
   		</div>
   	</div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+       function initMap() {
+        var myLatLng = {lat: -22.8938492, lng: -43.1991803};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          zoom: 4
+        });
+        var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: 'Hello World!'
+        });
+      }
+      initMap();
+    </script>
   </body>
 </html>
