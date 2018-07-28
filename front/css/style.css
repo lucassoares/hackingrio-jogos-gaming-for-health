@@ -25,7 +25,7 @@ body{
 #rounded_button{
 	border-radius: 100px;
 }
-<<<<<<< HEAD
+
 #rounded_button{
 	background-color: #0C4A66;
 	color: white;
@@ -40,10 +40,10 @@ body{
 .form-control::-moz-placeholder { color: white; }  /* Mozilla Firefox 19+ */
 .form-control:-ms-input-placeholder { color: white; }  /* Internet Explorer 10-11 */
 .form-control::-ms-input-placeholder { color: white; }  /* Microsoft Edge */
-=======
+
 #rounded_button_map{
 	border-radius: 100px;
 	margin:0.8px;
 	left:-11px;
 }
->>>>>>> 60643c68110175c134cad694582acaa494453aa2
+
