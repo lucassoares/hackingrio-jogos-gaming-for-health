@@ -33,7 +33,6 @@ body{
 	background-color: #087CAF;
 	color: white;
 	border-color: #07AAD6;
-
 }
 .form-control::-webkit-input-placeholder { color: white; }  /* WebKit, Blink, Edge */
 .form-control:-moz-placeholder { color: white; }  /* Mozilla Firefox 4 to 18 */
