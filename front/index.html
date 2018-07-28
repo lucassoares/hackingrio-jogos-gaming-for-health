@@ -12,21 +12,30 @@
 
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?key=coloque_sua_chave_aqui" >
+    <script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8MPq9oYdh-2zRiJawfCrh36QQ7Jfgb4M" >
     </script>
   </head>
   <body>
   	<div class="container">
-  		<div class="row">
+  		<div class="row mb-3">
+        <div class="col-md-12">
+          <img src="img/lua_grande.png" class="w-50" alt="placeholder+image">
+          <div class="btn-group ml-5 rounded_button" role="group" aria-label="Basic example">
+            <button type="button" id="rounded_button" class="btn btn-sm btn-secondary mr-1">BR</button>
+            <button type="button" id="rounded_button" class="btn btn-sm btn-secondary mr-1">US</button>
+            <button type="button" id="rounded_button" class="btn btn-sm btn-secondary">ES</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
   			<div class="col-md-12">
-  				<form>
-  					<img src="http://dummyimage.com/400x400/4d494d/686a82.gif&text=placeholder+image" class="img img-responsive" alt="placeholder+image"> <br> <br>
+  				<form id="foo" action="" method="POST"> 
   					<div class="form-group" id="userLogin">
-  						<input id="inputLoginEmail" class="form-control" type="text" name="" value="" placeholder="Email"> <br>
-  						<input id="inputLoginSenha" class="form-control" type="password" name="" value="" placeholder="Senha">
+  						<input id="inputLoginEmail" class="form-control" type="text" name="username" value="" placeholder="Email"> <br>
+  						<input id="inputLoginSenha" class="form-control" type="password" name="password" value="" placeholder="Senha">
   					</div>
   					<div class="form-group">
-  						<button class="btn btn-default" id="btnLogin">login</button> <br>
+  						<button type="submit" class="btn btn-default" id="btnLogin">login</button> <br>
   						<button class="btn btn-default" id="btnRegistrar">registrar</button>
   					</div>
   				</form>
@@ -36,5 +45,26 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $("#foo").submit(function(event){
+        console.log("Aqui 1");
+        event.preventDefault();
+        var $form = $(this);
+        var serializedData = $form.serialize();
+
+        $.ajax({
+          url: "http://localhost:8080/user/singin",
+          type: "POST",
+          data: serializedData,
+          success: function(result){
+            console.log("Aqui");
+            document.cookie = "logged=true";
+          }, 
+          error: function(fail){
+            document.cookie = "logged=false";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
