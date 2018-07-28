@@ -7,11 +7,14 @@ package com.hackingrio.developers.model;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
+import org.hibernate.annotations.NaturalId;
 
 /**
  *
@@ -20,8 +23,12 @@ import javax.persistence.OneToMany;
 @Entity
 public class Usuario {
     @Id
+    private String username;
+	
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    
+    private String password;
     
     private String nome;    
     
@@ -63,4 +70,22 @@ public class Usuario {
     public void setNacionalidade(String nacionalidade) {
         this.nacionalidade = nacionalidade;
     }
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+    
+    
 }
