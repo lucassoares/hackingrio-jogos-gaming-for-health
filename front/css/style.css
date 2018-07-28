@@ -1,0 +1,24 @@
+body{
+	background-color: #00BFFF;
+}
+#userLogin{
+	background-color: #1E90FF;
+	padding: 20px;
+}
+#btnLogin{
+	background-color: #1E90FF;
+	color: white;
+	width: 100%;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px;
+}
+#btnRegistrar,#btnFazerRegistro{
+	background-color: #1E90F6;
+	color: white;
+	margin-top: 10px;
+	width: 100%;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px;
+}
