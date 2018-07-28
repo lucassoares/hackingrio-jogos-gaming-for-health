@@ -1,8 +1,8 @@
 body{
-	background-color: #00BFFF;
+	background-color: #07AAD6;
 }
 #userLogin{
-	background-color: #1E90FF;
+	background-color: #087CAF;
 	padding: 20px;
 }
 #btnLogin{
@@ -14,7 +14,7 @@ body{
 	padding: 10px;
 }
 #btnRegistrar,#btnFazerRegistro{
-	background-color: #1E90F6;
+	background-color: #087CAF;
 	color: white;
 	margin-top: 10px;
 	width: 100%;
@@ -25,3 +25,18 @@ body{
 #rounded_button{
 	border-radius: 100px;
 }
+#rounded_button{
+	background-color: #0C4A66;
+	color: white;
+}
+.inputDesign{
+	background-color: #087CAF;
+	color: white;
+	border-color: #07AAD6;
+
+}
+.form-control::-webkit-input-placeholder { color: white; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: white; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: white; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: white; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: white; }  /* Microsoft Edge */
