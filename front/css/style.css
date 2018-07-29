@@ -35,11 +35,11 @@ body{
 	border-color: #07AAD6;
 }
 
-.form-control::-webkit-input-placeholder { color: white; }  /* WebKit, Blink, Edge */
-.form-control:-moz-placeholder { color: white; }  /* Mozilla Firefox 4 to 18 */
-.form-control::-moz-placeholder { color: white; }  /* Mozilla Firefox 19+ */
-.form-control:-ms-input-placeholder { color: white; }  /* Internet Explorer 10-11 */
-.form-control::-ms-input-placeholder { color: white; }  /* Microsoft Edge */
+.form-control::-webkit-input-placeholder { color: white; }  
+.form-control:-moz-placeholder { color: white; }  
+.form-control::-moz-placeholder { color: white; }  
+.form-control:-ms-input-placeholder { color: white; }  
+.form-control::-ms-input-placeholder { color: white; } 
 
 #rounded_button_map{
 	border-radius: 100px;
@@ -47,13 +47,13 @@ body{
 	left:-11px;
 }
 @media only screen and (max-width: 600px) {
-   #luaIcone{
+   .luaIcone{
    	width: 200px;
    }
 }
 
 @media only screen and (min-width: 601px){
-	#luaIcone{
+	.luaIcone{
 		width: 250px;
 	}
 }
