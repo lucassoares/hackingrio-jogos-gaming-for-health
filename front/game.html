@@ -53,7 +53,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <div class="btn-group" role="group" aria-label="Basic example" style="position: absolute; top: -70px; left: 5%;">
+          <div class="btn-group botoes-footer" role="group" aria-label="Basic example">
             <button type="button" id="rounded_button_map" class="btn btn-warning" data-toggle="modal" data-target="#modalAgua">Água</button>
             <button type="button" id="rounded_button_map" class="btn btn-warning" data-toggle="modal" data-target="#modalArLivre">Ar Livre</button>
             <button type="button" id="rounded_button_map" class="btn btn-warning" data-toggle="modal" data-target="#modalLugaresHis">Lugares Hi.</button>
@@ -74,11 +74,15 @@
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <ul class="list-group">
+              <li class="list-group-item">Prainha</li>
+              <li class="list-group-item">Praia de ipanema</li>
+              <li class="list-group-item">Praia de copacabana</li>
+              <li class="list-group-item">Praia do Arpoador</li>
+            </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
           </div>
         </div>
       </div>
@@ -95,11 +99,15 @@
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <ul class="list-group">
+              <li class="list-group-item">Forte de Copacabana</li>
+              <li class="list-group-item">Jardim Botânico</li>
+              <li class="list-group-item">Pedra da Gávea</li>
+              <li class="list-group-item">Mirante Dona Marta</li>
+            </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
           </div>
         </div>
       </div>
@@ -110,17 +118,21 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Lugares Historicos</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Lugares Históricos</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <ul class="list-group">
+              <li class="list-group-item">Theatro Municipal</li>
+              <li class="list-group-item">Museu Histórico Nacional</li>
+              <li class="list-group-item">Confeitaria Colombo</li>
+              <li class="list-group-item">Paço Imperial</li>
+            </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
           </div>
         </div>
       </div>
@@ -137,11 +149,15 @@
             </button>
           </div>
           <div class="modal-body">
-          
+            <ul class="list-group">
+              <li class="list-group-item">Cristo Redentor</li>
+              <li class="list-group-item">Bondinho Pão de Açúcar</li>
+              <li class="list-group-item">Lapa</li>
+              <li class="list-group-item">Maracanã</li>
+            </ul>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
@@ -150,68 +166,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-<<<<<<< HEAD
-    <script type="text/javascript">
-
-
-      var pontosTuristicos = [
-       
-      ];
-
-      function initialize() {
-        var markers = [];
-        var mapp = new google.maps.Map(document.getElementById('map-canvas'), {
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          panControl: false,
-          gestureHandling: 'greedy',
-        });}
-    
-      var x = document.getElementById("demo");
-      var latitude;
-      var longitude;
-
-      getLocation();
-
-      function getLocation() {
-          if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(showPosition);
-          } else {
-              x.innerHTML = "Localização não é suportada pelo navegador!";
-              x.hidden = false;
-          }
-      }
-      function showPosition(position) {
-          latitude  = position.coords.latitude;
-          longitude = position.coords.longitude;
-          initMap();
-      }
-       function initMap() {
-        var myLatLng = {lat: latitude, lng: longitude};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLng,
-          zoom: 4
-        });
-        var marker = new google.maps.Marker({
-          map: map,
-          position: myLatLng,
-          title: 'Hello World!'
-        });
-      }
-
-      let urlAtual = (window.location).toString();
-      if( urlAtual.includes("created=t") ) {
-        let cadastradoSucesso = document.getElementById("cadastradoSucesso").hidden = false;
-      }
-
-      function logout() {
-        document.cookie = "logged=false";
-        window.location.href = "index.html";
-      }
-
-    </script>
-=======
     <script src="js/script.js"></script>
     <script src="js/showMap.js"></script>
->>>>>>> 4aa4f057c1dad812dcda47c5fe7038be91083703
   </body>
 </html>
