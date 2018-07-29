@@ -159,20 +159,11 @@
 
       function initialize() {
         var markers = [];
-        var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        var mapp = new google.maps.Map(document.getElementById('map-canvas'), {
           mapTypeId: google.maps.MapTypeId.ROADMAP,
           panControl: false,
           gestureHandling: 'greedy',
-        });
-      var styles = [
-        {
-          featureType: 'all',
-          elementType: 'labels',
-          stylers: [{ visibility: 'off' }],
-        },
-      ];
-      
-    map.setOptions({ styles: styles }); 
+        });}
     
       var x = document.getElementById("demo");
       var latitude;
