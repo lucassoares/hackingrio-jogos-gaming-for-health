@@ -58,10 +58,10 @@
         var serializedData = $form.serialize();
 
         $.ajax({
-          url: "http://localhost:8080/user/singin",
+          url: " https://d0a678a5.ngrok.io/user/singin",
           type: "POST",
           data: serializedData,
-          success: function(result){
+          success: function(result, status, jqxhr){
             document.cookie = "logged=true";
             window.location.href = "game.html";
           }, 

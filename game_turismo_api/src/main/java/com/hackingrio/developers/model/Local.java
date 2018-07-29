@@ -21,7 +21,7 @@ import javax.persistence.Id;
  */
 @Entity
 public class Local {
-    @Id
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     

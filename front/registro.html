@@ -49,7 +49,7 @@
         var serializedData = $form.serialize();
 
         $.ajax({
-          url: "http://localhost:8080/user/singup",
+          url: "https://d0a678a5.ngrok.io/user/singup",
           type: "POST",
           data: serializedData,
           success: function(result){
