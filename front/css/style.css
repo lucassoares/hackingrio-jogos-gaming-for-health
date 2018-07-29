@@ -57,9 +57,15 @@ body{
 		width: 250px;
 	}
 }
-
 .botoes-footer {
 	position: absolute;
 	top: -70px;
 	left: 5%;
+}
+.modalDesign{
+	background-color: #07AAD6;
+	color: #E6B524;
+}
+.modal-title{
+	color: white;
 }
