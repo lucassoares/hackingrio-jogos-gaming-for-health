@@ -48,7 +48,7 @@ body{
 }
 @media only screen and (max-width: 600px) {
    .luaIcone{
-   	width: 200px;
+   		width: 150px;
    }
 }
 
