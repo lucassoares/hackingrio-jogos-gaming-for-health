@@ -14,10 +14,14 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-       <a class="navbar-brand" href="index.html"> <img src="img/moedas_Feito.png" class="img-fluid" style="width: 150px;"> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <a class="navbar-brand d-block d-sm-none" href="index.html">
+        <img src="img/moedas_Feito.png" class="img-fluid" style="width: 120px;">
+        0
+      </a>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -38,12 +42,18 @@
             </div>
           </li>
       </div>
+      <a class="navbar-brand d-none d-md-block" class="btn btn-warning" data-toggle="modal" data-target="#modalMoeda"">
+        <img src="img/moedas_Feito.png" class="img-fluid" style="width: 120px;">
+        0
+      </a>
+      
     </nav>
+
     <div class="alert alert-success text-center" id="cadastradoSucesso" role="alert" hidden>
-     Cadastro realizado com sucesso! 
-     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+       Cadastro realizado com sucesso! 
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
     
     <div id="map" style="height: 90vh;"></div>
@@ -75,7 +85,7 @@
           </div>
           <div class="modal-body">
             <ul class="list-group">
-              <li class="list-group-item">Prainha</li>
+              <li class="list-group-item" type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalPrainha">Prainha</li>
               <li class="list-group-item">Praia de ipanema</li>
               <li class="list-group-item">Praia de copacabana</li>
               <li class="list-group-item">Praia do Arpoador</li>
@@ -83,6 +93,29 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalPrainha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5 class="text-center" id="exampleModalLabel">Prainha</h5>
+
+            <p>Localidade: Av. Estado da Guanabara que começa da Estrada do Pontal na altura da Estrada Ver. Alceu de Carvalho.</p>
+            <p>
+              Verdadeiro santuário natural, a praia fica na zona oeste do Rio de Janeiro, na região do Recreio dos Bandeirantes. É protegida por dois morros de mata atlântica, com algumas das melhores ondas da cidade para surfe e um mar inacreditavelmente azulado.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>-->
           </div>
         </div>
       </div>
@@ -155,6 +188,26 @@
               <li class="list-group-item">Lapa</li>
               <li class="list-group-item">Maracanã</li>
             </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal  - Moeda -->
+    <div class="modal fade" id="modalMoeda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Moedas</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="text-center">Ainda não temos nenhum registro :c <br> Vamos dominar o Rio de Janeiro juntos!</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
