@@ -57,11 +57,13 @@
       $("#foo").submit(function(event){
         event.preventDefault();
 
+        var host = "https://62e41de9.ngrok.io/";
+
         var $form = $(this);
         var serializedData = $form.serialize();
 
         $.ajax({
-          url: " https://d0a678a5.ngrok.io/user/singin",
+          url: host + "/user/singin",
           type: "POST",
           data: serializedData,
           success: function(result, status, jqxhr){
