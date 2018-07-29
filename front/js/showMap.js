@@ -17,7 +17,6 @@ var pontosTuristicos = [
 ];
 
 function initialize() {
-	var map
 	var markers = [];
 	var map = new google.maps.Map(document.getElementById('map'), {
 	  mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -34,7 +33,6 @@ function initialize() {
 	];
 
 	map.setOptions({ styles: styles });
-
 
 	var x = document.getElementById("demo");
 	var latitude;
@@ -63,6 +61,7 @@ function initialize() {
 		  center: myLatLng,
 		  zoom: 14
 		});
+
 		var marker = new google.maps.Marker({
 		  map: map,
 		  position: myLatLng,
@@ -81,4 +80,13 @@ function initialize() {
 }
 
 initialize();
+
+function andaPersonagem() {
+	//Verificando a cada 6 segundos localização do usuário
+	setInterval(function(){ 
+		//initialize();
+	}, 60000);
+}
+
+andaPersonagem();
 

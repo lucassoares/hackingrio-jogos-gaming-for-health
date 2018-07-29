@@ -54,7 +54,12 @@ body{
 
 @media only screen and (min-width: 601px){
 	#luaIcone{
-		width: 230px;
+		width: 250px;
 	}
 }
 
+.botoes-footer {
+	position: absolute;
+	top: -70px;
+	left: 5%;
+}

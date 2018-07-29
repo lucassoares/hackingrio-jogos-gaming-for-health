@@ -23,12 +23,6 @@ function showPosition(position) {
   longitude = position.coords.longitude;
 }
 
-var primeiraLatitude = ;
-var segundaLatitude = ;
+//var primeiraLatitude = ;
+//var segundaLatitude = ;
 
-function andaPersonagem() {
-	//Verificando a cada 6 segundos localização do usuário
-	setInterval(function(){ 
-	
-	}, 6000);
-}
